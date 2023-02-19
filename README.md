@@ -29,7 +29,7 @@ Lots of new skills! (that need to be polished)
 - Adobe Illustrator
 - ai2html
 
-## Remaining items on the to do list (I will do these!)
+## Remaining items on the to do list 
 
 - Make my charts responsive. I will do this!! I am just new to Illustrator and it took me a long time to make the charts in the first place and I didn't have the time to make different versions for each chart. 
 
