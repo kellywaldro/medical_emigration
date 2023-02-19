@@ -36,3 +36,5 @@ Lots of new skills! (that need to be polished)
 - I have an interview about this with an Irish doctor in Australia, and I hope to rewrite the text based on that conversation. I have also reached out to others who I hope to be able to talk to.  
 
 - Centering some text (I think I need to make a better index html template to do this more easily for the next projects)
+
+- Make my charts bigger on the page (this seems simple yet I have not managed to do it without messing up the display/layout of my charts)
