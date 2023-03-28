@@ -12,24 +12,8 @@
   <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
   <link rel="stylesheet" href="./resources/qgis2web.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pharmacies</title>
+  <title>Medical Emigration</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <style>
-    .search-layer {
-      top: 65px;
-      left: .5em;
-    }
-
-    .ol-touch .search-layer {
-      top: 80px;
-    }
-
-    ​ .container {
-      /* Remove the line below if you want a wider page */
-      max-width: 700px !important;
-      font-family: Palatino;
-    }
-  </style>
   <style>
     html,
     body {
@@ -52,19 +36,274 @@
       background: rgba(255, 255, 255, 0.5) !important;
       color: black !important;
     }
-  </style>
-  <style>
-    html,
-    body,
-    #map {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
+
+    .container {
+      max-width: 800px !important;
+      color: #000000;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .title {
+      color: #000000;
+      font-family: 'Arial', sans-serif;
+      font-size: medium;
+    }
+
+    .subtitle {
+      color: #000000;
+      font-family: 'Arial', sans-serif;
+      font-size: medium;
+    }
+
+    .text {
+      color: #000000;
+      font-family: 'Arial', sans-serif;
     }
   </style>
-  <title></title>
-</head>
+
+  <!-- ai file: visas_by_state.ai -->
+  <style media="screen,print">
+    #g-visas_by_state-box,
+    #g-visas_by_state-box .g-artboard {
+      margin: 0 auto;
+    }
+
+    #g-visas_by_state-box p {
+      margin: 0;
+    }
+
+    #g-visas_by_state-box .g-aiAbs {
+      position: absolute;
+    }
+
+    #g-visas_by_state-box .g-aiImg {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100% !important;
+    }
+
+    #g-visas_by_state-box .g-aiSymbol {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    #g-visas_by_state-box .g-aiPointText p {
+      white-space: nowrap;
+    }
+
+    #g-visas_by_state-Artboard_1 {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #g-visas_by_state-Artboard_1 p {
+      font-family: arial, helvetica, sans-serif;
+      line-height: 14px;
+      height: auto;
+      opacity: 1;
+      letter-spacing: 0em;
+      font-size: 12px;
+      text-align: left;
+      color: rgb(90, 90, 90);
+      text-transform: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      mix-blend-mode: normal;
+      font-style: normal;
+      position: static;
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle0 {
+      line-height: 29px;
+      height: 29px;
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle1 {
+      line-height: 20px;
+      height: 20px;
+      font-size: 17px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle2 {
+      font-weight: bold;
+      line-height: 18px;
+      height: 18px;
+      font-size: 15px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle3 {
+      font-weight: bold;
+      line-height: 29px;
+      height: 29px;
+      font-size: 24px;
+      color: rgb(255, 255, 255);
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle4 {
+      font-weight: bold;
+      line-height: 29px;
+      height: 29px;
+      font-size: 17px;
+      color: rgb(255, 255, 255);
+    }
+
+    #g-visas_by_state-Artboard_1 .g-pstyle5 {
+      height: 14px;
+    }
+
+    #g-visas_by_state-Artboard_1 .g-cstyle0 {
+      font-size: 24px;
+    }
+
+    #g-visas_by_state-Artboard_1 .g-cstyle1 {
+      font-weight: 500;
+    }
+
+    #g-visas_by_state-Artboard_15 {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #g-visas_by_state-Artboard_15 p {
+      font-family: arial, helvetica, sans-serif;
+      line-height: 13px;
+      height: auto;
+      opacity: 1;
+      letter-spacing: 0em;
+      font-size: 11px;
+      text-align: left;
+      color: rgb(90, 90, 90);
+      text-transform: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      mix-blend-mode: normal;
+      font-style: normal;
+      position: static;
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle0 {
+      line-height: 22px;
+      height: 22px;
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle1 {
+      line-height: 17px;
+      height: 17px;
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle2 {
+      font-weight: bold;
+      line-height: 14px;
+      height: 14px;
+      font-size: 12px;
+      color: rgb(0, 0, 0);
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle3 {
+      font-weight: bold;
+      line-height: 17px;
+      height: 17px;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle4 {
+      font-weight: bold;
+      line-height: 17px;
+      height: 17px;
+      font-size: 10px;
+      color: rgb(255, 255, 255);
+    }
+
+    #g-visas_by_state-Artboard_15 .g-pstyle5 {
+      height: 13px;
+      text-align: right;
+    }
+
+    #g-visas_by_state-Artboard_15 .g-cstyle0 {
+      font-size: 14px;
+    }
+  </style>
+
+
+  <script type="text/javascript">
+    (function () {
+      // only want one resizer on the page
+      if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+      document.documentElement.className += " g-resizer-v3-init";
+      // require IE9+
+      if (!("querySelector" in document)) return;
+      function resizer() {
+        var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+          widthById = {};
+        elements.forEach(function (el) {
+          var parent = el.parentNode,
+            width = widthById[parent.id] || parent.getBoundingClientRect().width,
+            minwidth = el.getAttribute("data-min-width"),
+            maxwidth = el.getAttribute("data-max-width");
+          widthById[parent.id] = width;
+          if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        });
+        try {
+          if (window.parent && window.parent.$) {
+            window.parent.$("body").trigger("resizedcontent", [window]);
+          }
+          if (window.require) {
+            require(['foundation/main'], function () {
+              require(['shared/interactive/instances/app-communicator'], function (AppCommunicator) {
+                AppCommunicator.triggerResize();
+              });
+            });
+          }
+        } catch (e) { console.log(e); }
+      }
+      document.addEventListener('DOMContentLoaded', resizer);
+      // feel free to replace throttle with _.throttle, if available
+      window.addEventListener('resize', throttle(resizer, 200));
+      function throttle(func, wait) {
+        // from underscore.js
+        var _now = Date.now || function () { return new Date().getTime(); },
+          context, args, result, timeout = null, previous = 0;
+        var later = function () {
+          previous = _now();
+          timeout = null;
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        };
+        return function () {
+          var now = _now(), remaining = wait - (now - previous);
+          context = this;
+          args = arguments;
+          if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+              clearTimeout(timeout);
+              timeout = null;
+            }
+            previous = now;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+          }
+          return result;
+        };
+      }
+
+    })();
+  </script>
 
 <body>
   <section class="section">
@@ -72,62 +311,203 @@
       <div class="column is-one-quarter">
       </div>
       <div class="column is-half">
-        <h1 class="title is-1">Why are there so many pharmacies in Paris?</h1>
-        <p>The pharmacy in France is ubiquitous. Small, independent and identifiable by a bright LED green cross. It is
-          in every way a window onto French culture: the prescriptions that are almost entirely covered by the public
-          healthcare system, the unscented skin care products, and the opening times which read "fermé le Dimanche"
-          (closed on Sunday).<br><br>It hadn't occurred to me just how many there were until I was standing at the view
-          point on top of l'Arc de Triomphe at night in Paris last month and noticed the bright green lights scattered
-          across the city.</p>
-        <iframe width='100%' height='400px'
-          src="https://api.mapbox.com/styles/v1/kwaldron/cldnry2c600el01o60ql5xsde.html?title=false&access_token=pk.eyJ1Ijoia3dhbGRyb24iLCJhIjoiY2xkbnF4ZjlxMDBtZjN2cHJsYzR0N3M5MCJ9.i0ML2GPOcH-tOOgugnk9nA&zoomwheel=false#12.47/48.85913/2.33216"
-          title="Monochrome" style="border:none;"></iframe>
-        <p>Pharmacies in Paris | source: <a
-            href="https://www.data.gouv.fr/fr/datasets/pharmacies-de-paris/">data.gouv.fr</a></p>
-        <p>It turns out that this accessibility is something I would miss after relocating to the US. In more ways than
-          just geographical. Namely the prices. </p>
-        <figure class="image is-2by4">
-          <img src="./Screen Shot 2023-02-03 at 4.09.46 PM.png"><small>Products I typically buy on a regular basis.
-            Ibuprofen aside, each product is cheaper in France. Prices in green indicate the cost of the item in France
-            and in blue for the same item in the US.<br>Source: CVS, Nuxe and CityPharma.</small></figcaption>
-        </figure>
-        <p>While it may seem obvious that some of these French cosmetics brands are cheaper in France, in my experience
-          equivalent products here from local brands tend to be more expensive, too. </p>
-        <p>For medical products, it is more difficult to compare as for many individuals in the US, the cost of
-          medication is largely dependent on the insurance they have. That said, in France, all citizens and most
-          residents are covered under the public health scheme which reimburses essential medicine at 100% of the cost,
-          and non-essential medicine at 15-65% of the cost depending on the product. </p>
-        <p>There are strict regulations around who can own and operate a pharmacy in France: it can only be a practicing
-          pharmacist who is certified and working in the establishment. As a result, there are no pharmacy chains, and
-          they only sell medical or cosmetic items. No magazines, chocolates or stationery. </p>
-        <p>Pharmacies have a monopoly over medical products. In a way that can be a nuisance at times, you cannot find
-          regular over the counter medication anywhere else. Not even ibuprofen at the supermarket. That is perhaps why
-          there are so many pharmacies, as they are the only distributors of such essentials. </p>
-        <p>To compare, I mapped the density of pharmacies in each city. Across all Parisian districts, there is an
-          average number of 5 pharmacies per 10,000 people, while in New York the average is 3. </p>
-        <div><iframe title="Pharmacy Density in Paris" aria-label="Map" id="datawrapper-chart-VhIWJ"
-            src="https://datawrapper.dwcdn.net/VhIWJ/4/" scrolling="no" frameborder="0" style="border: none;"
-            width="600" height="454" data-external="1"></iframe>
-          <div>
-            <p>Even in the outer districts of Paris, where there are fewer pharmacies, there are still as many the
-              average NYC borough.<br></p>
-          </div>
+
+        <div class="container">
+          <h1 class="title">
+            Australia Recruits the Doctors that Ireland Struggles to Retain
+          </h1>
           <br>
-          <div><iframe title="Pharmacy Density in NYC" aria-label="Map" id="datawrapper-chart-0zKsb"
-              src="https://datawrapper.dwcdn.net/0zKsb/3/" scrolling="no" frameborder="0" style="border: none;"
-              width="600" height="729" data-external="1">
-              <p></p>
-            </iframe></div>
-          <div>
-            <p>
-              Geographically, the density of pharmacies is also more concentrated in Paris than in NYC. The population
-              of Paris, 2.3 million, is approximately equivalent to that of Queens, yet its surface area of Paris is
-              equivalent to less than half the area that Queens covers.
+          <p class="subtitle">
+            By Kelly Waldron
+          </p>
+          <br>
+          <p class="text">“Now recruiting healthcare workers,” reads a large billboard near the Mater, one of
+            Dublin’s major hospitals. It shows a healthcare worker smiling underneath a surgical mask. Similar
+            boards
+            are dotted around the city; this is no Irish recruitment effort, but rather an Australian one, paid for
+            by the Government of Victoria.</p>
+          <p class="text">Ireland produces the most medical graduates of any country among the OECD, a group of
+            mostly wealthy countries. But they are emigrating in droves, many of them to the sunny Australian coast.
+            Between June 2021 and 2022, 404 skilled visas were granted to Irish medical doctors by the Australian
+            government, most of whom are under the age of 30. That is equivalent to almost half the number of people
+            who became registered doctors in Ireland last year––a whopping 888 graduates.</p>
+          <p class="text">Western Australia is their landing pad of choice. Out of the 404 medical visas granted,
+            around 65% of them were destined for practitioners going to the golden state. One reason why is that it
+            is easier to send off an application. The state healthcare system funnels job applications through a
+            centralized portal run by a third party, whereas applications in other states typically require tedious
+            individual applications to hospitals and service providers. Landing a job in Perth takes less
+            head-scratching than applying for one in Melbourne or Sydney. </p>
+
+        </div>
+
+
+      </div>
+      <div class="column is-one-quarter">
+      </div>
+    </div>
+    </div>
+
+    <div class="chart">
+      <div id="g-visas_by_state-box" class="ai2html">
+
+        <!-- Artboard: Artboard_1 -->
+        <div id="g-visas_by_state-Artboard_1" class="g-artboard" style="width:805px; height:599.999999999999px;"
+          data-aspect-ratio="1.342" data-min-width="805">
+          <div style=""></div>
+          <img id="g-visas_by_state-Artboard_1-img" class="g-visas_by_state-Artboard_1-img g-aiImg" alt=""
+            src="./viz/ai2html-output/visas_by_state-Artboard_1.png" />
+          <div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:13.649%;margin-top:-65.9px;left:13.7098%;width:600px;">
+            <p class="g-pstyle0">A Streamlined Journey</p>
+            <p class="g-pstyle1">Western Australia&rsquo;s centralized recruitment portal for Resident Medical
             </p>
+            <p class="g-pstyle1">Officers makes it the most popular destination in the country for Irish
+              doctors.
+            </p>
+            <p>&nbsp;</p>
           </div>
-          <div class="column is-one-third">
-
-            <div>
-
-            </div>
+          <div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:21.6456%;margin-top:-28.9px;left:13.6844%;width:104px;">
+            <p class="g-pstyle2">New South </p>
+            <p class="g-pstyle2">Wales</p>
+            <p class="g-pstyle2">12</p>
           </div>
+          <div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:20.3059%;margin-top:-19.8px;left:29.1199%;width:77px;">
+            <p class="g-pstyle2">Victoria</p>
+            <p class="g-pstyle2">62</p>
+          </div>
+          <div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:31.8059%;margin-top:-19.8px;left:13.9631%;width:112px;">
+            <p class="g-pstyle2">Other States</p>
+            <p class="g-pstyle2">28</p>
+          </div>
+          <div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:34.5521%;margin-top:-17.3px;left:29.1453%;width:225px;">
+            <p class="g-pstyle3">Western Australia</p>
+          </div>
+          <div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:39.1354%;margin-top:-20.8px;left:29.313%;width:260px;">
+            <p class="g-pstyle4"><span class="g-cstyle0">262 </span>medical visas granted*<span class="g-cstyle0">
+              </span></p>
+          </div>
+          <div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:57.1392%;margin-top:-19.8px;left:14.1651%;width:108px;">
+            <p class="g-pstyle2">Queensland</p>
+            <p class="g-pstyle2">40</p>
+          </div>
+          <div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:91.1829%;margin-top:-8.1px;left:42.7003%;width:379px;">
+            <p class="g-pstyle5">*Visas granted to Irish citizens under the General Practitioners and</p>
+          </div>
+          <div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:93.5162%;margin-top:-8.1px;left:41.9349%;width:391px;">
+            <p class="g-pstyle5">Resident Medical Officers occupation, between June 2021 and 2022.<span
+                class="g-cstyle1"> </span></p>
+          </div>
+          <div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:97.1829%;margin-top:-8.1px;left:47.1471%;width:343px;">
+            <p class="g-pstyle5">Source: Australian Government, Department of Home Affairs</p>
+          </div>
+        </div>
+
+        <!-- Artboard: Artboard_15 -->
+        <div id="g-visas_by_state-Artboard_15" class="g-artboard" style="max-width: 350px;max-height: 500px"
+          data-aspect-ratio="0.7" data-min-width="0" data-max-width="804">
+          <div style="padding: 0 0 142.8571% 0;"></div>
+          <img id="g-visas_by_state-Artboard_15-img" class="g-visas_by_state-Artboard_15-img g-aiImg" alt=""
+            src="./viz/ai2html-output/visas_by_state-Artboard_15.png" />
+          <div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:11.5319%;margin-top:-53.7px;left:2.0317%;width:351px;">
+            <p class="g-pstyle0">A Streamlined Journey</p>
+            <p class="g-pstyle1">Western Australia&rsquo;s centralized recruitment portal for </p>
+            <p class="g-pstyle1">Resident Medical Officers makes it the most popular </p>
+            <p class="g-pstyle1">destination in the country for Irish doctors.</p>
+            <p>&nbsp;</p>
+          </div>
+          <div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:19.1213%;margin-top:-15.6px;left:1.8738%;width:50px;">
+            <p class="g-pstyle2">NSW</p>
+            <p class="g-pstyle2">12</p>
+          </div>
+          <div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:19.1213%;margin-top:-15.6px;left:21.8841%;width:42px;">
+            <p class="g-pstyle2">VIC</p>
+            <p class="g-pstyle2">62</p>
+          </div>
+          <div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:27.1213%;margin-top:-15.6px;left:2.2427%;width:54px;">
+            <p class="g-pstyle2">Other</p>
+            <p class="g-pstyle2">28</p>
+          </div>
+          <div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:28.5977%;margin-top:-10px;left:22.3317%;width:139px;">
+            <p class="g-pstyle3">Western Australia</p>
+          </div>
+          <div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:31.7977%;margin-top:-12px;left:22.5538%;width:159px;">
+            <p class="g-pstyle4"><span class="g-cstyle0">262 </span>medical visas granted*<span class="g-cstyle0">
+              </span></p>
+          </div>
+          <div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:44.5213%;margin-top:-15.6px;left:2.51%;width:47px;">
+            <p class="g-pstyle2">QLD</p>
+            <p class="g-pstyle2">40</p>
+          </div>
+          <div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText"
+            style="top:71.8611%;margin-top:-27.3px;right:1.6954%;width:332px;">
+            <p class="g-pstyle5">*Visas granted to Irish citizens under the General Practitioners </p>
+            <p class="g-pstyle5">and Resident Medical Officers occupation, between June 2021</p>
+            <p class="g-pstyle5">and 2022. Source: Australian Government, Department of</p>
+            <p class="g-pstyle5"> Home Affairs</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- End ai2html - 2023-02-18 23:50 -->
+
+  </section>
+
+  <div class="columns is-multiline content">
+    <div class="column is-one-quarter">
+    </div>
+    <div class="column is-half">
+
+      <div class="container">
+        <p class="text">The sorry state of the healthcare system at home is largely behind this mass exodus. The HSE,
+          the national public service provider, has long been plagued with staffing and budget shortfalls, which
+          worsened throughout the pandemic. Last year, the Irish Medical Organisation, the union that represents
+          healthcare workers, announced that 97% of its junior doctors voted in favour of industrial action in response
+          to unsustainable working conditions, including unsafe and illegal working hours.</p>
+        <p class="text">Newly accredited doctors are all too familiar with the sector’s ills. That they are emigrating
+          in droves is not an issue of training but retention.To be fully certified, graduates must complete one year of
+          rotations as junior doctors in Ireland. That is long enough to burn out, according to Hughie Lavelle, who
+          studied medicine at the University of Galway and completed his rotation in Dublin before moving to Perth last
+          year.</p>
+        <p class="text">“I was working 15 hours pretty regularly in the hospital five days a week, taking on far too
+          much responsibility for the amount of experience I had,” he said.</p>
+        <p class="text">For the hours clocked in Australian hospitals, Lavelle says it is a different story. “This is
+          just the polar opposite in every regard … better pay, better lifestyle, less working hours, less stressful,
+          intense, tedious work during those working hours.” </p>
+        <p class="text">It is also a trail well traveled. Historic ties between Australia and Ireland have led to an
+          Irish stronghold across the country, which makes the move less daunting. “You know that you can go there and
+          that there will be an Irish community,” said Lavelle. Perth even boasts its own Gaelic sports club. </p>
+        <p class="text">The fact that Australia is stepping in and recruiting Irish-trained medical practitioners
+          looking for better work-life balance is noteworthy, too. Its healthcare system is largely dependent on foreign
+          labor, and Irish graduates make ideal candidates; as English speakers with degrees that are automatically
+          recognized by the Medical Board of Australia. </p>
+        <p class="text">If Ireland is to address staffing shortages in the healthcare sector, it will have to look to
+          improve working conditions for doctors to look to follow their career aspirations at home. </p>
+          <p><br></p>
+      </div>
+
+      
+
+    </div>
+    <div class="column is-one-quarter">
+    </div>
+  </div>
+  </div>
