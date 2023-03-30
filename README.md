@@ -22,6 +22,7 @@ I have found that almost half of Irish medical  graduates leave to go and work i
 
 ## Tools Used
 
+- R (for data exploration)
 - RAWgraphs
 - Adobe Illustrator
 - ai2html 
