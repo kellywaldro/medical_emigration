@@ -20,21 +20,8 @@ I have found that almost half of Irish medical  graduates leave to go and work i
 
 - Charts were made in R and [RAWgraphs.io](https://www.rawgraphs.io/) and edited in Adobe Illustrator. 
 
-## New Skills 
+## Tools Used
 
-Lots of new skills! (that need to be polished)
-
-- R / GGplot
 - RAWgraphs
 - Adobe Illustrator
-- ai2html
-
-## Remaining items on the to do list 
-
-- Make my charts responsive. I will do this!! I am just new to Illustrator and it took me a long time to make the charts in the first place and I didn't have the time to make different versions for each chart. 
-
-- I have an interview about this with an Irish doctor in Australia, and I hope to rewrite the text based on that conversation. I have also reached out to others who I hope to be able to talk to.  
-
-- Centering some text (I think I need to make a better index html template to do this more easily for the next projects)
-
-- Make my charts bigger on the page (this seems simple yet I have not managed to do it without messing up the display/layout of my charts)
+- ai2html 
